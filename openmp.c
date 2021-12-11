@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 {
 	N = atoi(argv[1]);
 	int m = N, n = N;
-	int numt = 6;
+	int numt = atoi(argv[2]);
 	double *a, *b, *c;
 	fflush(stdout);
 	// Allocate memory for 2-d array a[m, n]
