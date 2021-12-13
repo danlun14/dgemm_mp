@@ -8,6 +8,7 @@ enum
 	NREPS = 1
 };
 int N = 1000;
+
 void printVector(double *v, int n)
 {
 	for (int i = 0; i < n; i++)
@@ -43,7 +44,6 @@ int main(int argc, char *argv[])
 	double t1 = -omp_get_wtime();
 	for (int i = 0; i < NREPS; i++)
 	{
-
 #pragma omp parallel num_threads(numt)
 		{
 #pragma omp master
@@ -66,7 +66,6 @@ int main(int argc, char *argv[])
 					}
 				}
 			}
-
 #pragma omp barrier
 		}
 	}
